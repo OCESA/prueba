@@ -1,3 +1,4 @@
+
 version: 0.0
 os: linux
 files:
@@ -7,8 +8,8 @@ hooks:
   BeforeInstall:
     - location: deploy/before_install
       timeout: 300
-      runas: centos
+      runas: root
   AfterInstall:
     - location: deploy/restart_server
       timeout: 300
-      runas: centos
+      runas: root
