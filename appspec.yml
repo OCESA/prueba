@@ -4,7 +4,7 @@ version: 0.0
 os: linux
 files:
   - source: /index.html
-    destination: /var/www/html/
+    destination: /var/www/html
 permissions:
   - object: /
     pattern: "**"
@@ -12,10 +12,10 @@ permissions:
     group: centos
 hooks:
   BeforeInstall:
-    - location: /before_start.sh
+    - location: /BeforeInstall.sh
       timeout: 300
       runas: centos
   AfterInstall:
-    - location: /after_start.sh
+    - location: /AfterInstall.sh
       timeout: 300
       runas: centos
