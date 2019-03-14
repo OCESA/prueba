@@ -5,6 +5,11 @@ os: linux
 files:
   - source: /index.html
     destination: /var/www/html/
+permissions:
+  - object: /
+    pattern: "**"
+    owner: centos
+    group: centos
 hooks:
   BeforeInstall:
     - location: /before_start.sh
