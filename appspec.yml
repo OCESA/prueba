@@ -7,10 +7,10 @@ files:
     destination: /var/www/html/
 hooks:
   BeforeInstall:
-    - location: /home/centos/before_start.sh
+    - location: /opt/codedeploy-agent/deployment-root/8de9276a-3aa7-41f6-a97b-33f9b1c3a2a0/d-L7HAAPWRY/deployment-archive/before_start.sh
       timeout: 300
       runas: root
   AfterInstall:
-    - location: /home/centos/after_start.sh
+    - location: /opt/codedeploy-agent/deployment-root/8de9276a-3aa7-41f6-a97b-33f9b1c3a2a0/d-L7HAAPWRY/deployment-archive/after_start.sh
       timeout: 300
       runas: root
